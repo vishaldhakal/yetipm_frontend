@@ -5,19 +5,6 @@ import { Info } from "lucide-react";
 import Image from "next/image";
 
 export default function PropertyDetails({ rentalDetail }) {
-  // Parse the price breakdown HTML string into an array of items
-  const priceBreakdownItems = rentalDetail.price_breakdown
-    ? rentalDetail.price_breakdown.match(/<li[^>]*>.*?<\/li>/g).map((item) => {
-        const title = item.match(
-          /<span class="fee-title[^>]*>(.*?)<\/span>/
-        )[1];
-        const amount = item.match(
-          /<span class="fee-amount[^>]*>(.*?)<\/span>/
-        )[1];
-        return { label: title, amount: amount.replace("$", "") };
-      })
-    : [];
-
   return (
     <div className="max-w-7xl mx-auto p-4">
       <div className="grid md:grid-cols-[1fr,400px] gap-8">
@@ -38,15 +25,11 @@ export default function PropertyDetails({ rentalDetail }) {
                   </span>
                 </div>
 
-                {priceBreakdownItems.map((item) => (
-                  <div
-                    key={item.label}
-                    className="flex justify-between items-center border-b border-dotted border-gray-200 pb-2"
-                  >
-                    <span className="text-gray-700">{item.label}</span>
-                    <span className="text-gray-900">${item.amount}</span>
-                  </div>
-                ))}
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: rentalDetail.price_breakdown,
+                  }}
+                />
 
                 <div className="text-sm text-gray-500 mt-4 space-y-2">
                   <p>
@@ -64,20 +47,22 @@ export default function PropertyDetails({ rentalDetail }) {
           </section>
 
           {/* Home Features Section */}
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">Home features</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-              {rentalDetail.features.map((feature) => (
-                <div key={feature.id} className="flex items-center gap-2">
-                  <span className="text-2xl">🏠</span>
-                  <span className="text-gray-700">{feature.name}</span>
-                  {feature.name.toLowerCase().includes("pet") && (
-                    <Info className="w-4 h-4 text-gray-400" />
-                  )}
-                </div>
-              ))}
-            </div>
-          </section>
+          {rentalDetail.features.length > 0 && (
+            <section>
+              <h2 className="text-2xl font-semibold mb-4">Home features</h2>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+                {rentalDetail.features.map((feature) => (
+                  <div key={feature.id} className="flex items-center gap-2">
+                    <span className="text-2xl">🏠</span>
+                    <span className="text-gray-700">{feature.name}</span>
+                    {feature.name.toLowerCase().includes("pet") && (
+                      <Info className="w-4 h-4 text-gray-400" />
+                    )}
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
 
           {/* Home Description Section */}
           <section>
