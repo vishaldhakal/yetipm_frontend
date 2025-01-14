@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Shield, Home, PawPrint, Building } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
-export default function AdditionalInfo() {
+export default function AdditionalInfo({ rentalDetail }) {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
