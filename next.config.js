@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["localhost", "127.0.0.1"], // Add your production domain here
+    domains: ["yetipm.baliyoventures.com", "127.0.0.1"], // Add your production domain here
   },
   async headers() {
     return [

@@ -3,16 +3,32 @@
 import { Heart, Share2, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 
-export default function PropertyListing() {
+export default function PropertyListingHeroSection() {
   return (
     <div className="max-w-7xl mx-auto p-4">
       <div className="flex items-center justify-between mb-4">
-        <div className="flex items-center gap-2 text-sm text-gray-600">
-          <span>Search</span>
-          <span>/</span>
-          <span>5608 Kleberg Trail, Austin, TX 78747</span>
-        </div>
+        <Breadcrumb>
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/">Search</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage>
+                5608 Kleberg Trail, Austin, TX 78747
+              </BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
         <div className="flex gap-3">
           <button className="p-2 hover:bg-gray-100 rounded-full">
             <Share2 className="w-5 h-5" />

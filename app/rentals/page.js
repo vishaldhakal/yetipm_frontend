@@ -6,7 +6,6 @@ import RentalFilters from "@/components/filters/RentalFilters";
 import RentalCardSkeleton from "@/components/cards/RentalCardSkeleton";
 import { useSearchParams, useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { MapPin } from "lucide-react";
 
 export default function RentalsPage() {
   const [rentals, setRentals] = useState([]);
@@ -17,7 +16,7 @@ export default function RentalsPage() {
     max_price: "",
     beds: "",
     baths: "",
-    property_type: "",
+    project_type: "",
     city: "",
     availability: "true",
   });
