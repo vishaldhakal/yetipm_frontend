@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import RentalCard from "@/components/cards/RentalCard";
 import RentalFilters from "@/components/filters/RentalFilters";
 import RentalCardSkeleton from "@/components/cards/RentalCardSkeleton";
-import { useSearchParams, useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 
 export default function RentalsPage() {
@@ -20,9 +19,6 @@ export default function RentalsPage() {
     city: "",
     availability: "true",
   });
-
-  const searchParams = useSearchParams();
-  const router = useRouter();
 
   useEffect(() => {
     fetchRentals();
