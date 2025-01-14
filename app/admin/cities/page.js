@@ -30,7 +30,9 @@ export default function CitiesPage() {
 
   const fetchCities = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/cities/");
+      const response = await fetch(
+        "https://yetipm.baliyoventures.com/api/cities/"
+      );
       const data = await response.json();
       setCities(data.results);
     } catch (error) {
@@ -42,7 +44,9 @@ export default function CitiesPage() {
 
   const fetchStates = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/states/");
+      const response = await fetch(
+        "https://yetipm.baliyoventures.com/api/states/"
+      );
       const data = await response.json();
       setStates(data.results);
     } catch (error) {

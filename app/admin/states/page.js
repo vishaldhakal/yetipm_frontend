@@ -22,7 +22,9 @@ export default function StatesPage() {
 
   const fetchStates = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/states/");
+      const response = await fetch(
+        "https://yetipm.baliyoventures.com/api/states/"
+      );
       const data = await response.json();
       setStates(data.results);
     } catch (error) {
