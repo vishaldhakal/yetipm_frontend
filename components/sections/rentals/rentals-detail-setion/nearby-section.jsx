@@ -68,7 +68,7 @@ export default function NearbySections() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {[
             {
-              image: "/placeholder.svg",
+              image: "/codos.png",
               rent: "2,235",
               allInPrice: "2,294",
               beds: 4,
@@ -83,7 +83,7 @@ export default function NearbySections() {
               hasVirtualTour: false,
             },
             {
-              image: "",
+              image: "/single.png",
               rent: "2,290",
               allInPrice: "2,434",
               beds: 4,
@@ -98,7 +98,7 @@ export default function NearbySections() {
               hasVirtualTour: true,
             },
             {
-              image: "/placeholder.svg",
+              image: "/gg.png",
               rent: "1,660",
               allInPrice: "1,719",
               beds: 3,
@@ -113,7 +113,7 @@ export default function NearbySections() {
               hasVirtualTour: false,
             },
             {
-              image: "/placeholder.svg",
+              image: "/colorado.png",
               rent: "1,610",
               allInPrice: "1,719",
               beds: 3,

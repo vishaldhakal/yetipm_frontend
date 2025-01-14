@@ -82,7 +82,7 @@ const TextWithContactButton = ({ title, subtitle, textContent, imgSrc }) => {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src={imgSrc}
+                src="/hero.png"
                 alt="Franchise Opportunities"
                 className="w-full h-[600px] object-cover"
               />

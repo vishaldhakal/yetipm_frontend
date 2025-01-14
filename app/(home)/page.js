@@ -36,7 +36,7 @@ export default async function Home() {
                 {
                   icon: "🏠",
                   title: "Single Family Homes",
-                  link: "/single-family-homes",
+                  link: "/",
                   count: "180+",
                 },
                 {
@@ -111,14 +111,14 @@ export default async function Home() {
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Texas Cities */}
           {[
-            { name: "Texas", image: "/texas.jpg" },
-            { name: "Florida", image: "/florida.jpg" },
-            { name: "California", image: "/california.jpg" },
-            { name: "New York", image: "/newyork.jpg" },
-            { name: "Arizona", image: "/arizona.jpg" },
-            { name: "Georgia", image: "/georgia.jpg" },
-            { name: "Colorado", image: "/colorado.jpg" },
-            { name: "Illinois", image: "/illinois.jpg" },
+            { name: "Texas", image: "/texas.png" },
+            { name: "Florida", image: "/florida.png" },
+            { name: "California", image: "/California.png" },
+            { name: "New York", image: "/newwork.png" },
+            { name: "Arizona", image: "/arozona.png" },
+            { name: "Georgia", image: "/gg.png" },
+            { name: "Colorado", image: "/colorado.png" },
+            { name: "Illinois", image: "/image.png" },
           ].map((city) => (
             <Link
               key={city.name}
@@ -155,7 +155,7 @@ export default async function Home() {
             className="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
           >
             <Image
-              src="/restaurant.webp"
+              src="/single.png"
               alt="Restaurant interior"
               width={600}
               height={400}
@@ -177,7 +177,7 @@ export default async function Home() {
             className="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
           >
             <Image
-              src="/store.jpg"
+              src="/codos.png"
               alt="Convenience store"
               width={600}
               height={400}
@@ -199,7 +199,7 @@ export default async function Home() {
             className="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
           >
             <Image
-              src="/office.jpeg"
+              src="/townhouse.png"
               alt="Modern office space"
               width={600}
               height={400}

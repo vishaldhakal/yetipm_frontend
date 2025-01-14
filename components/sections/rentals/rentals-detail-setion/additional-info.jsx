@@ -12,7 +12,7 @@ export default function AdditionalInfo() {
         <div className="container mx-auto">
           <div className="flex items-center justify-between mb-12">
             <h2 className="text-2xl md:text-3xl text-gray-800">
-              Invitation Homes difference
+              Invitation YetiPM difference
             </h2>
             <Link
               href="/about"
