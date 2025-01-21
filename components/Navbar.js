@@ -14,7 +14,7 @@ export default function Navbar() {
     { name: "Cities", href: "/cities" },
     { name: "Apply Now", href: "/apply" },
     { name: "Property Management", href: "/management" },
-    { name: "Contact", href: "/contact" },
+    { name: "Contact", href: "/contacts" },
   ];
 
   return (
